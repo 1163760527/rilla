@@ -1,0 +1,27 @@
+spring:
+  profiles:
+    actice: dev
+
+---
+server:
+  port: 8202
+spring:
+  profiles: dev
+  application:
+    name: spring-cloud-dev
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka/
+
+---
+server:
+  port: 8202
+spring:
+  profiles: test
+  application:
+    name: spring-cloud-test
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka/
